@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>REACT</title>
+
+    <meta name="description" content="React - Uma introdução à biblioteca React" />
+    <meta name="author" content="Jefferson Mariano de Souza" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/league.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="reveal-viewport theme-font-montserrat theme-color-silver-green">
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background="img/react-einstein.jpeg">
+          <h1>React</h1>
+          <small>Jefferson Mariano de Souza</small>
+        </section>
+
+        <section>
+          <section>
+            <h2>O que é React?</h2>
+            <img src="img/react-logo.png" width="300" />
+            <p>
+              React é uma biblioteca que auxilia na construção de interfaces.
+            </p>
+            <p class="fragment">
+              Comparando com um modelo MVC, React é o V, responsável apenas pela View.
+            </p>
+          </section>
+          <section>
+            <h2>Só isso?</h2>
+            <p>E por que todo esse <em>boom</em> em volta dessa biblioteca?</p>
+          </section>
+          <section>
+            <h2>Vantagens</h2>
+
+            <ul>
+              <li class="fragment">Fácil de aprender</li>
+              <li class="fragment">Reaproveitamento de código</li>
+              <li class="fragment">Comunidade ativa</li>
+              <li class="fragment">Sintaxe amigável na construção de componentes (HTML)</li>
+              <li class="fragment">Grandes empresas utilizando</li>
+              <li class="fragment">É rápido</li>
+              <div class="fragment">
+                <p class="fragment highlight-green grow">Muito rápido</p>
+              </div>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Por que é Rápido?</h2>
+
+          <p class="fragment">Virtual DOM</p>
+        </section>
+        <section>
+          <h2>O que é DOM?</h2>
+          <img class="fragment" src="img/DOM.png" />
+        </section>
+        <section>
+          <h2>Virtual DOM</h2>
+
+          <img class="fragment" src="img/virtual-dom.png" />
+        </section>
+        <section>
+          <h2>Comparando React com JQuery</h2>
+          <section>
+            <img class="fragment" src="img/jquery-vs-react.png" height="500px" />
+          </section>
+          <section>
+            <h3>JQuery</h3>
+            <p>A manipulação do DOM (operação custosa) fica nas mãos do desenvolvedor</p>
+            <p class="fragment">Toda modificação dispara uma alteração no DOM</p>
+          </section>
+          <section>
+            <h3>React</h3>
+            <p>Otimiza a manipulação do DOM, alterando somente o necessário</p>
+            <p class="fragment">Alterações são enviadas em lote, minimizando impacto no DOM</p>
+          </section>
+          <section>
+            <img src="img/react-jquery-comparison.png" width="80%" />
+          </section>
+          <section>
+            <img src="img/yeah.jpg" height="300px" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Sintaxe</h2>
+            <p class="fragment">A sintaxe mais utilizada para a criação de componentes em React é JSX</p>
+            <p class="" style="color: yellow">
+              <span class="fragment ">JSX é uma extensão da sintaxe do JavaScript que lembra XML</span>
+            </p>
+          </section>
+          <section>
+            <h3>Exemplo Sem JSX</h3>
+            <pre class="fragment">
+                            <code><div>
+  <p>Bem vindo ao React!</p>
+</div></code>
+                        </pre>
+
+            <pre class="fragment">
+                                <code>const element = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "p",
+    null,
+    "Bem vindo ao React!"
+  )
+);
+                                </code>
+                            </pre>
+          </section>
+          <section>
+            <h3>Exemplo Com JSX</h3>
+            <pre class="fragment">
+                            <code><div>
+  <p>Bem vindo ao React!</p>
+</div></code>
+</pre>
+            <pre class="fragment">
+                                <code>const element = (
+  <div>
+    <p>Bem vindo ao React!</p>
+  </div>
+);
+                                </code>
+                            </pre>
+          </section>
+        </section>
+        <section data-background="img/lego.jpg">
+          <h2>React é baseado em componentes</h2>
+        </section>
+        <section>
+          <section>
+            <img src="img/composite.png" />
+          </section>
+          <section>
+            <pre>
+                <code>React.createElement(
+  element, //div, p, h1, h2, span, header, main, etc
+  props, //id, class, data attributes
+  children // elementos filhos
+);
+                </code>
+            </pre>
+            <pre><code>const element = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "p",
+    null,
+    "Bem vindo ao React!"
+  )
+);
+                        </code>
+                    </pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Existem 2 tipos de componentes</h2>
+            <div>
+              <img src="img/pieces.jpg" width="20%" />
+            </div>
+            <ul>
+              <li class="fragment">Stateless</li>
+              <li class="fragment">Stateful</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Stateless Component</h2>
+            <pre class="fragment">
+                            <code>function Componente(nome) {
+  return (
+    <div>
+      <p>Bem vindo {nome}!</p>
+    </div>
+  );                                                         
+}
+                            </code>
+                        </pre>
+          </section>
+          <section>
+            <h2>Propriedades</h2>
+            <img src="img/props.png" />
+          </section>
+          <section>
+            <h2>Stateful Component</h2>
+            <pre class="fragment">
+                            <code>class Componente extends React.Component {
+  constructor() {
+    this.state = { nome: ''}
+  }
+
+  render() {
+    return (
+        <div>
+          <p>Bem vindo {this.state.nome}!</p>
+        </div>
+      );                                                         
+    }      
+  }
+}
+                            </code>
+                        </pre>
+          </section>
+        </section>
+        <section>
+          <h2>React way</h2>
+          <img src="img/react-way.png" />
+        </section>
+        <section>
+          <section data-background="img/cliente-em-duvida.jpg">
+            <h2 style="color: yellow">E o que eu preciso pra usar isso?</h2>
+          </section>
+          <section>
+            <h2>Dependências</h2>
+            <ul>
+              <li class="fragment">nodejs (jdk)</li>
+              <small class="fragment">plataforma base</small>
+
+              <li class="fragment">
+                yarn / npm (gradle / maven)
+                <small>npm duplicava dependencias (corrigido na versão 5)</small>
+              </li>
+
+              <li class="fragment">babel</li>
+              <img class="fragment" src="img/babel-loader.png" />
+            </ul>
+          </section>
+          <section>
+            <h2>Virtual Dom Como Uma Plataforma</h2>
+            <img src="img/react-react-native.png" />
+          </section>
+        </section>
+        <section data-background="img/end.jpg"></section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {
+            src: 'lib/js/classList.js',
+            condition: function() {
+              return !document.body.classList;
+            },
+          },
+          {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+              return !!document.querySelector('[data-markdown]');
+            },
+          },
+          {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+              return !!document.querySelector('[data-markdown]');
+            },
+          },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+          { src: 'plugin/search/search.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+        ],
+      });
+    </script>
+  </body>
+</html>

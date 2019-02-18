@@ -128,13 +128,13 @@
           </section>
           <section>
             <h3>Exemplo Sem JSX</h3>
-            <pre class="fragment">
+            <pre>
                             <code><div>
   <p>Bem vindo ao React!</p>
 </div></code>
                         </pre>
 
-            <pre class="fragment">
+            <pre>
                                 <code>const element = React.createElement(
   "div",
   null,
@@ -149,12 +149,12 @@
           </section>
           <section>
             <h3>Exemplo Com JSX</h3>
-            <pre class="fragment">
+            <pre>
                             <code><div>
   <p>Bem vindo ao React!</p>
 </div></code>
 </pre>
-            <pre class="fragment">
+            <pre>
                                 <code>const element = (
   <div>
     <p>Bem vindo ao React!</p>
@@ -162,6 +162,9 @@
 );
                                 </code>
                             </pre>
+          </section>
+          <section>
+            <img src="img/jsx-transpilation.png" />
           </section>
         </section>
         <section data-background="img/lego.jpg">
@@ -173,9 +176,15 @@
             <h2>O que é um componente?</h2>
           </section>
           <section>
-              <img src="img/Spotify_pure.png" width="90%" />
-            </section>
-            <section>
+            <img src="img/componentes-1.png" />
+          </section>
+          <section>
+            <img src="img/componentes-2.png" />
+          </section>
+          <section>
+            <img src="img/Spotify_pure.png" width="90%" />
+          </section>
+          <section>
             <img src="img/Spotify.png" width="90%" />
           </section>
         </section>
@@ -204,6 +213,9 @@
                         </code>
                     </pre>
           </section>
+          <section>
+            <img src="img/Spotify.png" width="90%" />
+          </section>
         </section>
         <section>
           <section>
@@ -229,11 +241,17 @@
                             </code>
                         </pre>
           </section>
-          <section>
-            <h2>Propriedades</h2>
-            <img src="img/props.png" />
-          </section>
-          <section>
+        </section>
+        <section>
+          <h2>Propriedades</h2>
+            <section>
+              <img src="img/prop.jpg" />
+            </section>
+            <section>
+              <img src="img/props.png" width="70%"/>
+            </section>
+        </section>
+        <section>
             <h2>Stateful Component</h2>
             <pre class="fragment">
                             <code>class Componente extends React.Component {
@@ -252,21 +270,44 @@
 }
                   </code>
               </pre>
-          </section>
-          <section>
-            <img src="img/react-lifecycle.png" />
-          </section>
-          <section>
-            <img src="img/lifecycle-code.png" width="75%" />
-          </section>
         </section>
+        <section>
+            <h2>Estado</h2>
+              <section>
+                <img src="img/state-comparacao.png"/>
+              </section>
+              <section>
+                <img src="img/state.jpg"/>
+              </section>
+              <section>
+                <img src="img/state-2.jpg"/>
+              </section>
+    
+              <!-- TODO explicar estado de forma simplificada (altera state e chama render) -->
+              <!-- TODO explicar ciclo de vida -->
+        </section>        
         <section>
           <h2>React way</h2>
           <img src="img/react-way.png" />
         </section>
         <section>
+          <img src="img/virtual-dom-2.png" width="80%" />
+        </section>
+        <section>
+          <h2>Ciclo de Vida</h2>
+          <section>
+            <img src="img/reactjs-lifecycle.png" />
+          </section>
+          <section>
+            <img src="img/lifecycle-code.png" height="600px" style="margin-top: 80px"/>
+          </section>
+          <section>
+            <img src="img/react-lifecycle.png" width="75%"/>
+          </section>
+        </section>
+        <section>
           <section data-background="img/cliente-em-duvida.jpg">
-            <h2 style="color: yellow">E o que eu preciso pra usar isso?</h2>
+            <h2 style="color: yellow">E o que eu preciso para usar?</h2>
           </section>
           <section>
             <h2>Dependências</h2>
@@ -276,7 +317,6 @@
 
               <li class="fragment">
                 yarn / npm (gradle / maven)
-                <small>npm duplicava dependencias (corrigido na versão 5)</small>
               </li>
 
               <li class="fragment">babel</li>
@@ -298,12 +338,12 @@ nvm install --lts
             </li>
             <li class="fragment">
               <pre><code>
-npm install create-react-app
+npm install -g create-react-app
 </code></pre>
             </li>
             <li class="fragment">
               <pre><code>
-create-react-app teste
+create-react-app aplicacao
 </code></pre>
               </li>
               <li class="fragment">Entrar no diretório e se divertir</li>

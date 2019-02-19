@@ -57,20 +57,24 @@
             <h2>Só isso?</h2>
             <p>E por que todo esse <em>boom</em> em volta dessa biblioteca?</p>
           </section>
+        </section>
+        <section>
+          <h2>Vantagens</h2>
           <section>
-            <h2>Vantagens</h2>
-
             <ul>
-              <li class="fragment">Fácil de aprender</li>
-              <li class="fragment">Reaproveitamento de código</li>
-              <li class="fragment">Comunidade ativa</li>
-              <li class="fragment">Sintaxe amigável na construção de componentes (HTML)</li>
-              <li class="fragment">Grandes empresas utilizando</li>
-              <li class="fragment">É rápido</li>
-              <div class="fragment">
-                <p class="fragment highlight-green grow">Muito rápido</p>
-              </div>
+              <li>Fácil de aprender</li>
+              <li>Reaproveitamento de código</li>
+              <li>Comunidade ativa</li>
+              <li>Sintaxe amigável na construção de componentes (HTML)</li>
+              <li>Grandes empresas utilizando</li>
+              <li>É rápido</li>
             </ul>
+          </section>
+          <section>
+            <ul>
+              <li>Muito rápido</li>
+            </ul>
+            <img src="img/road-runner.png" height="500px" />
           </section>
         </section>
         <section>
@@ -102,7 +106,10 @@
         <section>
           <h2>Comparando React com JQuery</h2>
           <section>
-            <img class="fragment" src="img/jquery-vs-react.png" height="500px" />
+            <img src="img/comparacao.png" height="500px" />
+          </section>
+          <section>
+            <img src="img/jquery-vs-react.png" height="500px" />
           </section>
           <section>
             <h3>JQuery</h3>
@@ -127,6 +134,14 @@
             </p>
           </section>
           <section>
+            <h3>Objetivo</h3>
+            <pre>
+                <code><div>
+  <p>Bem vindo ao React!</p>
+</div></code>
+            </pre>
+          </section>
+          <section>
             <h3>Exemplo Sem JSX</h3>
             <pre>
                             <code><div>
@@ -134,7 +149,7 @@
 </div></code>
                         </pre>
 
-            <pre>
+            <pre class="fragment grow visible current-fragment">
                                 <code>const element = React.createElement(
   "div",
   null,
@@ -154,7 +169,7 @@
   <p>Bem vindo ao React!</p>
 </div></code>
 </pre>
-            <pre>
+            <pre class="fragment grow visible current-fragment">
                                 <code>const element = (
   <div>
     <p>Bem vindo ao React!</p>
@@ -164,35 +179,43 @@
                             </pre>
           </section>
           <section>
-            <img src="img/jsx-transpilation.png" />
+            <h2>JSX é a sintaxe mais usada para criar componentes</h2>
           </section>
         </section>
         <section data-background="img/lego.jpg">
           <h2>React é baseado em componentes</h2>
-          <img class="fragment" src="img/components-everywhere.png" />
+          <img src="img/components-everywhere.png" />
         </section>
         <section>
           <section>
             <h2>O que é um componente?</h2>
+            <img src="img/componente-lego.jpg" />
           </section>
-          <section>
+          <section data-transition="zoom">
             <img src="img/componentes-1.png" />
           </section>
-          <section>
+          <section data-transition="fade">
             <img src="img/componentes-2.png" />
           </section>
           <section>
+            <h2>Exemplo: Spotify</h2>
+          </section>
+          <section data-transition="fade">
             <img src="img/Spotify_pure.png" width="90%" />
           </section>
-          <section>
+          <section data-transition="fade">
             <img src="img/Spotify.png" width="90%" />
           </section>
         </section>
         <section>
           <section>
+            <h2>Design pattern</h2>
+          </section>
+          <section>
             <img src="img/composite.png" />
           </section>
           <section>
+            <h4>Usando Composite</h4>
             <pre>
                 <code>React.createElement(
   element, //div, p, h1, h2, span, header, main, etc
@@ -219,13 +242,16 @@
         </section>
         <section>
           <section>
+            <h2>Tipos de Componentes</h2>
+          </section>
+          <section>
             <h2>Existem 2 tipos de componentes</h2>
             <div>
               <img src="img/pieces.jpg" width="20%" />
             </div>
             <ul>
-              <li class="fragment">Stateless</li>
-              <li class="fragment">Stateful</li>
+              <li class="fragment highlight-green visible current-fragment">Stateless</li>
+              <li class="fragment highlight-green visible current-fragment">Stateful</li>
             </ul>
           </section>
           <section>
@@ -244,17 +270,17 @@
         </section>
         <section>
           <h2>Propriedades</h2>
-            <section>
-              <img src="img/prop.jpg" />
-            </section>
-            <section>
-              <img src="img/props.png" width="70%"/>
-            </section>
+          <section>
+            <img src="img/prop.jpg" />
+          </section>
+          <section>
+            <img src="img/props.png" width="70%" />
+          </section>
         </section>
         <section>
-            <h2>Stateful Component</h2>
-            <pre class="fragment">
-                            <code>class Componente extends React.Component {
+          <h2>Stateful Component</h2>
+          <pre class="fragment">
+                            <code class="hljs javascript">class Componente extends React.Component {
   constructor() {
     this.state = { nome: ''}
   }
@@ -272,39 +298,40 @@
               </pre>
         </section>
         <section>
-            <h2>Estado</h2>
-              <section>
-                <img src="img/state-comparacao.png"/>
-              </section>
-              <section>
-                <img src="img/state.jpg"/>
-              </section>
-              <section>
-                <img src="img/state-2.jpg"/>
-              </section>
-    
-              <!-- TODO explicar estado de forma simplificada (altera state e chama render) -->
-              <!-- TODO explicar ciclo de vida -->
-        </section>        
+          <h2>Estado</h2>
+          <section>
+            <h4>Característica</h4>
+          </section>
+          <section>
+            <img src="img/state-comparacao.png" />
+          </section>
+          <section>
+            <img src="img/state.jpg" />
+          </section>
+          <section>
+            <img src="img/state-2.jpg" />
+          </section>
+        </section>
         <section>
           <h2>React way</h2>
           <img src="img/react-way.png" />
         </section>
         <section>
+          <h4>Mudança de Estado Altera DOM</h4>
           <img src="img/virtual-dom-2.png" width="80%" />
         </section>
-        <section>
+        <!-- <section>
           <h2>Ciclo de Vida</h2>
           <section>
             <img src="img/reactjs-lifecycle.png" />
           </section>
           <section>
-            <img src="img/lifecycle-code.png" height="600px" style="margin-top: 80px"/>
+            <img src="img/lifecycle-code.png" height="600px" style="margin-top: 80px" />
           </section>
           <section>
-            <img src="img/react-lifecycle.png" width="75%"/>
+            <img src="img/react-lifecycle.png" width="75%" />
           </section>
-        </section>
+        </section> -->
         <section>
           <section data-background="img/cliente-em-duvida.jpg">
             <h2 style="color: yellow">E o que eu preciso para usar?</h2>
@@ -323,36 +350,59 @@
               <img class="fragment" src="img/babel-loader.png" />
             </ul>
           </section>
+        </section>
+        <section>
+          <h2>Exemplo de Código</h2>
           <section>
-            <h2>Forma Fácil de Começar</h2>
-            <ul>
-              <li class="fragment">
-                Instalar Node.js
-                <div>(<a href="https://github.com/creationix/nvm">nvm - https://github.com/creationix/nvm</a>)</div>
-              </li>
-              <li class="fragment">
-                <pre><code>
-nvm install --lts
-</code></pre>
-              </li>
-            </li>
-            <li class="fragment">
-              <pre><code>
-npm install -g create-react-app
-</code></pre>
-            </li>
-            <li class="fragment">
-              <pre><code>
-create-react-app aplicacao
-</code></pre>
-              </li>
-              <li class="fragment">Entrar no diretório e se divertir</li>
-                </ul>
+            <img src="img/coding.gif" />
           </section>
           <section>
-            <h2>E o React Native?</h2>
-            <img src="img/react-react-native.png" />
+            <h3>HTML</h3>
+            <pre><code class="hljs html fragment grow visible" data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+  &lt;head&gt;
+    &lt;title&gt;React App&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div id="app"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
           </section>
+          <section>
+            <h3>JS (Setup)</h3>
+            <pre><code class="hljs javascript fragment grow visible" data-trim data-noescape>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+const divApp = document.getElementById('app');
+
+ReactDOM.render(&lt;App /&gt;, divApp);
+        </code></pre>
+          </section>
+          <section>
+            <h3>JS (Diversão)</h3>
+            <pre><code class="hljs javascript" data-trim data-noescape>
+import React from 'react';
+
+function App() {
+  return (
+    &lt;div className="full-width"&gt;
+      &lt;button onClick={() =&gt; alert('Oi!')}&gt;Hello!&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+                    </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>E o React Native?</h2>
+          <img src="img/react-react-native.png" />
         </section>
         <section data-background="img/end.jpg"></section>
       </div>
